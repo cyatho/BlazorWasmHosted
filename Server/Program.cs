@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.AspNetCore.ResponseCompression;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-builder.Services.AddOpenApiDocument();
 
 var app = builder.Build();
 
@@ -28,8 +27,6 @@ app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseOpenApi();
-app.UseSwaggerUi3();
 
 
 app.MapRazorPages();
